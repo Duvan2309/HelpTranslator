@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelpTranslator.Paginas.MenuPage"
+             BackgroundImage="multilingual.jpg"
+             Title="Help Translator">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Salir"  Priority="1" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <ScrollView Margin="10">
+            <FlexLayout Direction="Row" Wrap="Wrap" AlignItems="Stretch" AlignContent="Start">
+                <ImageButton Source="Traductor.png" BackgroundColor="Transparent" HeightRequest="200" FlexLayout.Grow="0" FlexLayout.Basis="50%" x:Name="btnTraductor" Clicked="BtnTraductor_Clicked"/>
+                <ImageButton Source="Video.png" BackgroundColor="Transparent" HeightRequest="200" FlexLayout.Grow="0" FlexLayout.Basis="50%" x:Name="btnVideos" Clicked="BtnVideos_Clicked"/>
+                <ImageButton Source="Lenguajes.png" BackgroundColor="Transparent" HeightRequest="200" FlexLayout.Grow="0" FlexLayout.Basis="50%" x:Name="btnLenguajes" Clicked="BtnLenguajes_Clicked"/>
+                <ImageButton Source="Apps.png" BackgroundColor="Transparent" HeightRequest="200" FlexLayout.Grow="0" FlexLayout.Basis="50%" x:Name="btnApps" Clicked="BtnApps_Clicked"/>
+                <ImageButton Source="Emails.png" BackgroundColor="Transparent" HeightRequest="200" FlexLayout.Grow="0" FlexLayout.Basis="50%" x:Name="btnEmail" Clicked="BtnEmail_Clicked"/>
+                <ImageButton Source="Ubicacion.png" BackgroundColor="Transparent" HeightRequest="200" FlexLayout.Grow="0" FlexLayout.Basis="50%" x:Name="btnUbicacion" Clicked="BtnUbicacion_Clicked"/>
+            </FlexLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

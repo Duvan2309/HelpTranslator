@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HelpTranslator.Validadores"
+             x:Class="HelpTranslator.Paginas.RegistroPage"
+             BackgroundImage="multilingual.jpg"
+             Title="Registro">
+    <ContentPage.Content>
+        <AbsoluteLayout Margin="5,0,5,5">
+            <FlexLayout IsVisible="True" JustifyContent="SpaceEvenly" Direction="Column" AlignItems="Center" Margin="30,0,30,0" >
+                <Image Source="Logo.jpg" HeightRequest="60" WidthRequest="60" FlexLayout.AlignSelf="Center" BackgroundColor="Transparent" />
+                <Entry x:Name="txtCorreo" Placeholder="Correo Electronico" ReturnType="Next" Keyboard="Email" FontSize="Medium" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand"  TextColor="Black" BackgroundColor="White" Opacity="0.9">
+                    <Entry.Behaviors>
+                        <local:CorreoValidador></local:CorreoValidador>
+                    </Entry.Behaviors>
+                </Entry>
+                <Entry x:Name="txtNombre" ReturnType="Next" MaxLength="30" Placeholder="Nombre Completo" FontSize="Medium" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand"  TextColor="Black" Keyboard="Text" BackgroundColor="White" Opacity="0.9"/>
+                <Entry x:Name="txtClave" ReturnType="Next" MaxLength="20" IsPassword="True" Placeholder="Contraseña" FontSize="Medium" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand"  TextColor="Black" BackgroundColor="White" Opacity="0.9"/>
+                <Entry x:Name="txtConfirmaClave" ReturnType="Next" MaxLength="20" IsPassword="True" Placeholder="Confirmar Contraseña" FontSize="Medium" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand"  TextColor="Black" BackgroundColor="White" Opacity="0.9"/>
+                <Label x:Name="lblMensajeClave" Text="" IsVisible="False" TextColor="Blue" FontSize="15" BackgroundColor="Transparent" FlexLayout.AlignSelf="End"/>
+                <Entry x:Name="txtCelular" ReturnType="Done" MaxLength="10" Keyboard="Telephone" Placeholder="Numero de Celular" FontSize="Medium" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand"  TextColor="Black" BackgroundColor="White" Opacity="0.9">
+                    <Entry.Behaviors>
+                        <local:NumeroValidador></local:NumeroValidador>
+                    </Entry.Behaviors>
+                </Entry>
+                <Label x:Name="lblMensajeCelular" Text="" IsVisible="False" TextColor="Blue" FontSize="15" BackgroundColor="Transparent" FlexLayout.AlignSelf="End"/>
+                <Button x:Name="btnRegistrar" Clicked="BtnRegistrar_Clicked" FontSize="Medium" TextColor="White" BorderColor="Black" BackgroundColor="#00b33c"  CornerRadius="5" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand" Text="Registrar"/>
+                <Button x:Name="btnIngresar" TextColor="Black" BackgroundColor="Transparent" Clicked="BtnIngresar_Clicked" Text="Ingresar" FontSize="13" FlexLayout.AlignSelf="Start" />
+            </FlexLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

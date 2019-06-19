@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelpTranslator.Paginas.PrincipalPage"
+             BackgroundImage="multilingual.jpg"
+             Title="Help Translator">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Salir"  Priority="1" Clicked="Salir_OnClicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <AbsoluteLayout Margin="3,3,3,3">
+            <ScrollView>
+                <FlexLayout IsVisible="True" JustifyContent="SpaceEvenly" Direction="Column" AlignItems="Start" >
+                    <ListView x:Name="listaUsuarios"
+                                  HasUnevenRows="True"
+                                  IsVisible="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Margin="2,2,2,2">
+                                        <Label Text="{Binding correo}" FontAttributes="Bold" TextColor="Black" FontSize="16"/>
+                                        <Label Text="{Binding nombre}" FontSize="12"/>
+                                        <Label Text="{Binding celular}" FontSize="12"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </FlexLayout>
+            </ScrollView>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

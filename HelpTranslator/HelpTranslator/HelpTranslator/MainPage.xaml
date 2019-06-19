@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HelpTranslator"
+             x:Class="HelpTranslator.MainPage"
+             Title="Help Translator"
+             x:Name="IngresoPagina"
+             BackgroundColor="Transparent"
+             BackgroundImage="multilingual.jpg"
+             NavigationPage.HasBackButton="False">
+
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <FlexLayout IsVisible="True" JustifyContent="SpaceEvenly" Direction="Column" AlignItems="Center" Margin="30,0,30,0" >
+                <Image Source="Logo.jpg" HeightRequest="140" WidthRequest="140" FlexLayout.AlignSelf="Center" BackgroundColor="Transparent" />
+                <Button x:Name="btnIngresar" FontSize="Medium" BorderColor="Black" FlexLayout.AlignSelf="Stretch" CornerRadius="5" Clicked="BtnIngresar_Clicked" HorizontalOptions="CenterAndExpand" Text="Ingresar" TextColor="White" BackgroundColor="#3399ff"/>
+                <Button x:Name="btnGoogle" FontSize="Medium" BorderColor="Black" FlexLayout.AlignSelf="Stretch" CornerRadius="5" Clicked="BtnGoogle_Clicked" HorizontalOptions="CenterAndExpand" Text="Cuenta Google" TextColor="White" BackgroundColor="#DB4437"/>
+                <Button x:Name="btnMirosoft" FontSize="Medium" BorderColor="Black" FlexLayout.AlignSelf="Stretch" CornerRadius="5" Clicked="BtnMirosoft_Clicked" HorizontalOptions="CenterAndExpand" Text="Cuenta Microsoft" TextColor="White" BackgroundColor="#4285F4"/>
+                <Label Text="- O -" FontSize="20" TextColor="Black" BackgroundColor="Transparent" FlexLayout.AlignSelf="Center"/>
+                <Button x:Name="btnRegistro" FontSize="Medium" TextColor="White" BorderColor="Black" BackgroundColor="#00b33c"  CornerRadius="5" FlexLayout.AlignSelf="Stretch" Clicked="BtnRegistro_Clicked" HorizontalOptions="CenterAndExpand" Text="Registro"/>
+                <Label Text=""/>
+            </FlexLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+
+</ContentPage>
