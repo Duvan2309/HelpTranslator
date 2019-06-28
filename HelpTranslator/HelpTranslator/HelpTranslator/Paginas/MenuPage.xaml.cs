@@ -20,38 +20,43 @@ namespace HelpTranslator.Paginas
 
         public async void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Salir", "Quieres salir?", "OK");
-            Application.Current.Quit();
+            bool salir = await DisplayAlert("Salir", "Quieres salir?", "Si", "No");
+            if (salir)
+            {
+                Application.Current.Quit();
+                await Navigation.PushAsync(new MainPage());
+            }
         }
 
-        private void BtnTraductor_Clicked(object sender, EventArgs e)
+        private async void BtnTraductor_Clicked(object sender, EventArgs e)
         {
 
+            await Navigation.PushAsync(new TraductorPage());
         }
 
-        private void BtnVideos_Clicked(object sender, EventArgs e)
+        private async void BtnVideos_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new VideosPage());
         }
 
-        private void BtnLenguajes_Clicked(object sender, EventArgs e)
+        private async void BtnLenguajes_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new LenguajesPage());
         }
 
-        private void BtnApps_Clicked(object sender, EventArgs e)
+        private async void BtnApps_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new AppsPage());
         }
 
-        private void BtnEmail_Clicked(object sender, EventArgs e)
+        private async void BtnEmail_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new EmailPage());
         }
 
-        private void BtnUbicacion_Clicked(object sender, EventArgs e)
+        private async void BtnUbicacion_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new UbicacionPage());
         }
     }
 }
